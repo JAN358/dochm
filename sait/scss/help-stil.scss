@@ -1,0 +1,171 @@
+/*-mixing-*/
+@function -zf-flex-justify($text-direction){
+  $-zf-flex-justify: (
+    'left': if($text-direction == rtl, flex-end, flex-start),
+    'right': if($text-direction == rtl, flex-start, flex-end),
+    'center': center,
+    'justify': space-between,
+    'spaced': space-around,
+  );
+
+  @return $-zf-flex-justify;
+}
+$-zf-flex-align: (
+  'top': flex-start,
+  'bottom': flex-end,
+  'middle': center,
+  'stretch': stretch,
+);
+$-zf-flex-direction: (
+  'row': row,
+  'row-reverse': row-reverse,
+  'column': column,
+  'column-reverse': column-reverse,
+);
+@mixin flex {
+  display: flex;
+}
+@mixin flex-align($x: null, $y: null) {
+  @if $x {
+    @if map-has-key(-zf-flex-justify(rtl), $x) {
+      $x: map-get(-zf-flex-justify(rtl), $x);
+    }
+    @else {
+      @warn 'flex-grid-row-align(): #{$x} is not a valid value for horizontal alignment. Use left, right, center, justify, or spaced.';
+    }
+  }
+
+  @if $y {
+    @if map-has-key($-zf-flex-align, $y) {
+      $y: map-get($-zf-flex-align, $y);
+    }
+    @else {
+      @warn 'flex-grid-row-align(): #{$y} is not a valid value for vertical alignment. Use top, bottom, middle, or stretch.';
+    }
+  }
+  justify-content: $x;
+  align-items: $y;
+}
+@mixin flex-jus($x: null) {
+    @if $x {
+      @if map-has-key(-zf-flex-justify(rtl), $x) {
+        $x: map-get(-zf-flex-justify(rtl), $x);
+      }
+      @else {
+        @warn 'flex-grid-row-align(): #{$x} is not a valid value for horizontal alignment. Use left, right, center, justify, or spaced.';
+      }
+    }
+  justify-content: $x;
+  }
+@mixin flex-align-self($y: null) {
+  @if $y {
+    @if map-has-key($-zf-flex-align, $y) {
+      $y: map-get($-zf-flex-align, $y);
+    }
+    @else {
+      @warn 'flex-grid-column-align(): #{$y} is not a valid value for alignment. Use top, bottom, middle, or stretch.';
+    }
+  }
+
+  align-self: $y;
+}
+@mixin flex-order($order: 0) {
+  order: $order;
+}
+@mixin flex-direction($direction: row) {
+  flex-direction: $direction;
+}
+
+/*-animation-*/
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+/*-font-weight-*/
+@mixin fw($weight:bold){
+  font-weight: $weight;
+}
+
+/*-border-radius-*/
+@mixin border-radius($r: 1px) {
+  -webkit-border-radius: $r;
+  -moz-border-radius: $r;
+  border-radius: $r;
+}
+
+/*-transition-*/
+@mixin transition($args: all, $duration: 0.3s, $function: linear) {
+  -webkit-transition: $args $duration $function;
+  -moz-transition: $args $duration $function;
+  -ms-transition: $args $duration $function;
+  -o-transition: $args $duration $function;
+  transition: $args $duration $function;
+}
+/*-opacity-*/
+@mixin opacity($opacity: 0.5) {
+  -webkit-opacity: $opacity;
+  -moz-opacity: $opacity;
+  opacity: $opacity;
+}
+
+/*-my stile-*/
+.fs12 {font-size: .75em;}
+.fs14 {font-size: 0.875em;}
+.fs16 {font-size: 1em;}
+.fs18 {font-size: 1.125em;}
+.fs20 {font-size: 1.25em;}
+.fs24 {font-size: 1.5em;}
+.fs26 {font-size: 1.625em;}
+.fs28 {font-size: 1.75em;}
+.fs32 {font-size: 2em;}
+.fs34 {font-size: 2.125em;}
+.fs36 {font-size: 2.25em;}
+.fs40 {font-size: 2.5em;}
+.fs48 {font-size: 3em;}
+.fs64 {font-size: 4em;}
+.fs80 {font-size: 5em;}
+.fs96 {font-size: 6em;}
+
+.pt-15, py15{padding-top: 15px;}
+.pb-15, py15{padding-bottom: 15px;}
+
+/*-for sait-*/
+
+.color1{color:$color1;}
+.color2{color:$color2;}
+.color3{color:$color3;}
+
+div[class*="btn"]{color: $white;@include border-radius(4px);margin: 30px 0 10px;}
+.btn1{
+  background-color: $color1;
+  position: relative;
+  &::after{
+  @extend %fa-icon;
+  @extend .fas;
+  content: fa-content($fa-var-angle-right);
+  }
+  &:hover{background-color: $color1 - #222222;}
+}
+.btn2{background-color: $color2;&:hover{background-color: $color2 - #222222;}}
