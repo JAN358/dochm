@@ -1,3 +1,13 @@
+body{
+  @include breakpoint(small) {
+    line-height: 21px;
+  }
+  @include breakpoint(medium) {
+    line-height: 22px;
+  }
+}
+
+
 div[class*="zona"]{
   padding-top: 50px;
   padding-bottom: 50px;
@@ -18,6 +28,7 @@ header{
     .block2{
       color:$dark-gray;
       text-align: left;
+      @extend .font-h;
     }
   }
   //.zona2{}
@@ -28,6 +39,7 @@ header{
         a{
           color: $white;
           padding: 20px;
+          @extend .font-b;
           @extend .fs18;
           &:hover{
             @include opacity(0.7);
@@ -56,6 +68,17 @@ header{
   @include flex-align-self(middle);
 }
 .homepage{
+  font-size:16px;
+  color:$color4;
+  line-height: 26px;
+  @include breakpoint(small) {
+    line-height: 21px;
+    font-size:15px;
+  }
+  @include breakpoint(medium) {
+    line-height: 22px;
+    font-size:15px;
+  }
   //.zona4{}
   .zona5{
     background-color: $color3;
@@ -98,6 +121,7 @@ h1, h2{
 
 /*- baner- -home -zona2 -*/
 .baner{
+  overflow: hidden;
   height: 480px;
   width: 100%;
   img{
@@ -105,6 +129,40 @@ h1, h2{
     height: 100%;
     object-fit: cover;
   }
+}
+
+/*-animation-*/
+
+@keyframes muve-t {
+from {left: -400px;transform: scale(1,1)}
+49%{left: 2600px;transform: scale(1,1)}
+50% {transform: scale(-1,1)}
+99%{left: -400px;transform: scale(-1,1)}
+to {transform: scale(1,1)}
+}
+
+@keyframes muve-c {
+from {left: -400px;transform: scale(-1,1) rotate(-25deg);}
+49%{left: 2600px;transform: scale(-1,1);}
+50% {transform: scale(1,1);}
+99%{left: -400px;transform: scale(1,1) rotate(-25deg);}
+to {transform: scale(-1,1);}
+}
+
+.tank{
+  top:-53px;
+  left:-200px;
+  position: relative;
+  max-width: 130px;
+  animation: 60s infinite muve-t ease;
+}
+
+.coper{
+  top:-500px;
+  left:-200px;
+  position: relative;
+  max-width: 130px;
+  animation: 26s infinite muve-c ease;
 }
 
 /*- accordion -home -zona-4 -bl-5 -*/
@@ -115,6 +173,7 @@ h1, h2{
       color: $white;
       text-align: left;
       @include text-transform(uppercase);
+      @extend .font-h;
       @extend .fs18;
       &:hover{
         background-color: $white;

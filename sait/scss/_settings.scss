@@ -64,9 +64,9 @@
 // 1. Global
 // ---------
 
-$global-font-size: 100%;
-$global-width: rem-calc(1200);
-$global-lineheight: 1.5;
+$global-font-size: 15px;
+$global-width: rem-calc(1180);
+$global-lineheight: 1.333;
 $foundation-palette: (
   primary: #1779ba,
   secondary: #767676,
@@ -77,13 +77,30 @@ $foundation-palette: (
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
+$black: #000000;
+$white: #ffffff;
 $color1: rgba(9,77,160,1);
 $color2: rgba(224,0,49,1);
 $color3: rgba(224,241,251,1);
+$color4: rgba(83,91,99,1);
+$color5: rgba(150,150,150,1);
+$color6: rgba(76,76,76,1);
+$color7: rgba(87,100,114,1);
+$color8: rgba(1,115,193,1); //#0173c1
+$color9: rgba(165,174,179,1);
+$color10: rgba(86,86,86,1); //#565656
+$color11: rgba(1,62,131,1);
+$color12: rgba(200,199,204,1);
+$color13: rgba(20,62,131,1);
+$color14: rgba(10,41,87,1);
+$color15: rgba(218,226,230,1);
+$color16: rgba(151,161,167,1); //#97a1a7
+$color17: rgba(205,207,209,1); //#cdcfd1
+$color18: rgba(224,224,224,1); //#e0e0e0
+$color19: rgba(245,245,245,1); //#f5f5f5
+$color20: rgba(60,60,60,1); //#3c3c3c
 $body-background: $white;
-$body-font-color: $black;
+$body-font-color: $color4;
 $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
@@ -140,23 +157,32 @@ $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
+// h2 15px 
 $header-styles: (
   small: (
-    'h1': ('font-size': 24),
+    'h1': ('font-size': 22),
     'h2': ('font-size': 20),
-    'h3': ('font-size': 19),
-    'h4': ('font-size': 18),
-    'h5': ('font-size': 17),
-    'h6': ('font-size': 16),
+    'h3': ('font-size': 18),
+    'h4': ('font-size': 15),
+    'h5': ('font-size': 12),
+    'h6': ('font-size': 10),
   ),
   medium: (
-    'h1': ('font-size': 48),
-    'h2': ('font-size': 40),
-    'h3': ('font-size': 31),
-    'h4': ('font-size': 25),
-    'h5': ('font-size': 20),
-    'h6': ('font-size': 16),
+    'h1': ('font-size': 30),
+    'h2': ('font-size': 20),
+    'h3': ('font-size': 18),
+    'h4': ('font-size': 15),
+    'h5': ('font-size': 12),
+    'h6': ('font-size': 10),
   ),
+  large: (
+    'h1': ('font-size': 42),
+    'h2': ('font-size': 20),
+    'h3': ('font-size': 18),
+    'h4': ('font-size': 12),
+    'h5': ('font-size': 10),
+    'h6': ('font-size': 16),
+    )
 );
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
@@ -432,7 +458,7 @@ $select-background: $white;
 $select-triangle-color: $dark-gray;
 $select-radius: $global-radius;
 $input-color: $black;
-$input-placeholder-color: $medium-gray;
+$input-placeholder-color: $color4;
 $input-font-family: inherit;
 $input-font-size: rem-calc(16);
 $input-font-weight: $global-weight-normal;

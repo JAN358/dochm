@@ -14,18 +14,59 @@
         .zona1.py15
           %section.grid-container
             .grid-x.grid-padding-x
-              .block1.large-3.cell.logo
+              .block1.large-6.cell.logo
                 %span.is DOC
                 %span.uslugi &nbspHandler
-              .block2.large-9.cell.lozung
+              .block2.large-18.cell.lozung
                 В разработке
         .zona2
           .baner
             %img{:src => "img/banner.png"}
+            .tank
+              %img{:src => "img/tank.gif"}
+            .coper
+              %img{:src => "img/coper.gif"}
+          %section.grid-container
+            .table.grid-x.grid-padding-x
+              .large-8.medium-8.small-24.colm
+                .srtoc.th
+                  %b 1
+                .stroc.td
+                  4
+                .stroc.td.last-b
+                  7  
+              .large-8.medium-8.small-24.colm
+                .srtoc.th
+                  %b 2
+                .stroc.td
+                  5
+                .stroc.td.last-b
+                  8
+              .large-8.medium-8.small-24.colm.last-r
+                .srtoc.th
+                  %b 3
+                .stroc.td
+                  6
+                .stroc.td.last-b
+                  9
+          /        
+            %table
+              %tr
+                %th 1
+                %th 2
+                %th 3
+              %tr
+                %td 4
+                %td 5
+                %td 6
+              %tr
+                %td 7
+                %td 8
+                %td 9
         .zona3
           %section.grid-container
             .grid-x.grid-padding-x
-              .block4.large-12.cell
+              .block4.large-24.cell
                 %ul.menu
                   %li
                     %a{:href => "javascript:void(0)"} Главная
@@ -35,21 +76,25 @@
                     %a{:href => "javascript:void(0)"} Портфолио
                   %li
                     %a{:href => "javascript:void(0)"} Контакты
+                  /
+                    %li
+                      %form
+                        %input{:type => "text", :disabled => "disabled"}
       .zona4
         %section.grid-container
           .block5
             .grid-x.grid-padding-x
-              .large-12.cell
+              .large-24.cell
                 %h1 Что такое информационная система "Услуги"?
             .grid-x.grid-padding-x
-              .large-12.cell
+              .large-24.cell
                 %ul.accordion{"data-accordion" => ""}
                   %li.accordion-item.is-active{"data-accordion-item" => ""}
                     %a.accordion-title{:href => "#"}
                       .grid-x.grid-padding-x
-                        .large-1.cell
+                        .large-2.cell
                           %i{:class => "fas fa-address-card fs40"}
-                        .large-11.cell
+                        .large-22.cell
                           Информационная система
                     .accordion-content{"data-tab-content" => ""}
                       %ul
@@ -76,9 +121,9 @@
                   %li.accordion-item{"data-accordion-item" => ""}
                     %a.accordion-title{:href => "#"}
                       .grid-x.grid-padding-x
-                        .large-1.cell
+                        .large-2.cell
                           %i{:class => "fas fa-money-check-alt fs40"}
-                        .large-11.cell
+                        .large-22.cell
                           Цифровая экономика
                     .accordion-content{"data-tab-content" => ""}
                       %ul
@@ -89,9 +134,9 @@
                   %li.accordion-item{"data-accordion-item" => ""}
                     %a.accordion-title{:href => "#"}
                       .grid-x.grid-padding-x
-                        .large-1.cell
+                        .large-2.cell
                           %i{:class => "fas fa-gavel fs40"}
-                        .large-11.cell
+                        .large-22.cell
                           Законодательная база
                     .accordion-content{"data-tab-content" => ""}
                       %ul
@@ -103,10 +148,10 @@
         %section.grid-container
           .block7
             .grid-x.grid-padding-x
-              .large-12.cell
-                %h2 Основные преимущества
+              .large-24.cell
+                %h2.title Основные преимущества
             .grid-x.grid-padding-x
-              .advantage.large-12
+              .advantage.large-24.cell
                 .main-content1
                   .card
                     .card-section
@@ -139,54 +184,54 @@
                     Вход через госуслуги (ЕСИА)
           .block8
             .grid-x.grid-padding-x
-              .large-12
+              .large-24.cell
                 .button.btn2
                   Демонстрационный сервер
             .grid-x.grid-padding-x
-              .large-12
+              .large-24.cell
                 Попробуйте систему на демонстрационном сервере прямо сейчас!
       /
         .zona6
         %section.grid-container
           .block9
             .grid-x.grid-padding-x
-              .large-12
-                %h2 Доступно на всех видах современных устройств
+              .large-24.cell
+                %h2.title Доступно на всех видах современных устройств
             .grid-x.grid-padding-x.align-center
-              .large-8
+              .large-16.cell
                 %img{:src => "img/display.svg"}
             .grid-x.grid-padding-x
-              .large-12
+              .large-24
                 .button.btn2
                   Демонстрационный сервер
       .zona7
         %section.grid-container
           .block10.documents
             .grid-x.grid-padding-x
-              .large-12
-                %h2 Документация
+              .large-24.cell
+                %h2.title Документация
             .grid-x.align-spaced
-              .doc.large-3
+              .doc.large-6.cell
                 .grid-x
-                  .large-3
+                  .large-6.cell
                     %i{:class => "fas fa-file-pdf fs64"}
-                  .large-9.text
+                  .large-18.cell.text
                     Руководство по установке
                     %br
                     %a{:href => "javascript:void(0)"} Скачать
-              .doc.large-3
+              .doc.large-6.cell
                 .grid-x
-                  .large-3
+                  .large-6.cell
                     %i{:class => "fas fa-file-pdf fs64"}
-                  .large-9.text
+                  .large-18.cell.text
                     Руководство по установке
                     %br
                     %a{:href => "javascript:void(0)"} Скачать
-              .doc.large-3
+              .doc.large-6.cell
                 .grid-x
-                  .large-3
+                  .large-6.cell
                     %i{:class => "fas fa-file-pdf fs64"}
-                  .large-9.text
+                  .large-18.cell.text
                     Руководство по установке
                     %br
                     %a{:href => "javascript:void(0)"} Скачать
@@ -194,22 +239,22 @@
         %section.grid-container
           .block10.documents
             .grid-x
-              .large-12
-                %h2 Цены
+              .large-24.cell
+                %h2.title Цены
             .grid-x.align-spaced
-              .doc.large-3
+              .doc.large-6.cell
                 .grid-x
-                  .large-3
+                  .large-6.cell
                     %i{:class => "fas fa-file-pdf fs64"}
-                  .large-9.text
+                  .large-18.cell.text
                     Для города с населением до 500 000 жителей
                     %br
                     %a{:href => "javascript:void(0)"} Скачать
-              .doc.large-3
+              .doc.large-6.cell
                 .grid-x
-                  .large-3
+                  .large-6.cell
                     %i{:class => "fas fa-file-pdf fs64"}
-                  .large-9.text
+                  .large-18.cell.text
                     Для города с населением до 500 000 жителей
                     %br
                     %a{:href => "javascript:void(0)"} Скачать
@@ -217,10 +262,10 @@
         %section.grid-container
           .block10.documents
             .grid-x
-              .large-12
-                %h2 Система внедрена:
+              .large-24.cell
+                %h2.title Система внедрена:
             .grid-x
-              .large-12
+              .large-24.cell
                 .logo
                   %span.is ИС
                   %span.uslugi услуги
@@ -229,108 +274,108 @@
         %section.grid-container
           .block11.documents
             .grid-x
-              .large-12
-                %h2 Популярные услуги
+              .large-24.cell
+                %h2.title Популярные услуги
             .grid-x
-              .large-4
+              .large-8.cell
                 .bblock1.grid-x
-                  .large-2
+                  .large-4.cell
                     %i{:class => "fas fa-stamp fs48"}
-                  .large-10.card-body
+                  .large-20.cell.card-body
                     .title-card
                       Разрешение на вырубку и кронирование деревьев
                     %a{:class => "seebut", :href => "javascript:void(0)"}
                       Посмотреть
-              .large-4
+              .large-8.cell
                 .bblock1.grid-x
-                  .large-2
+                  .large-4.cell
                     %i{:class => "fas fa-stamp fs48"}
-                  .large-10.card-body
+                  .large-20.cell.card-body
                     .title-card
                       Разрешение на вырубку и кронирование деревьев
                     %a{:class => "seebut", :href => "javascript:void(0)"}
                       Посмотреть
-              .large-4
+              .large-8
                 .bblock1.grid-x
-                  .large-2
+                  .large-4.cell
                     %i{:class => "fas fa-stamp fs48"}
-                  .large-10.card-body
+                  .large-20.cell.card-body
                     .title-card
                       Разрешение на вырубку и кронирование деревьев
                     %a{:class => "seebut", :href => "javascript:void(0)"}
                       Посмотреть
             .grid-x
-              .large-12
-                .button.btn1
+              .large-24.cell
+                .button.st2
                   Все услуги
       .zona11
         %section.grid-container
           .block12.documents
             .grid-x
-              .large-12
-                %h2 Популярные модули
+              .large-24.cell
+                %h2.title Популярные модули
             .grid-x
-              .large-4
+              .large-8.cell
                 .bblock1.grid-x
-                  .large-2
+                  .large-4.cell
                     %i{:class => "fas fa-stamp fs48"}
-                  .large-10.card-body
+                  .large-20.cell.card-body
                     .title-card
                       Разрешение на вырубку и кронирование деревьев
                     %a{:class => "seebut", :href => "javascript:void(0)"}
                       Посмотреть
-              .large-4
+              .large-8.cell
                 .bblock1.grid-x
-                  .large-2
+                  .large-4.cell
                     %i{:class => "fas fa-stamp fs48"}
-                  .large-10.card-body
+                  .large-20.cell.card-body
                     .title-card
                       Разрешение на вырубку и кронирование деревьев
                     %a{:class => "seebut", :href => "javascript:void(0)"}
                       Посмотреть
-              .large-4
+              .large-8.cell
                 .bblock1.grid-x
-                  .large-2
+                  .large-4.cell
                     %i{:class => "fas fa-stamp fs48"}
-                  .large-10.card-body
+                  .large-20.cell.card-body
                     .title-card
                       Разрешение на вырубку и кронирование деревьев
                     %a{:class => "seebut", :href => "javascript:void(0)"}
                       Посмотреть
             .grid-x
-              .large-12
-                .button.btn1
+              .large-24.cell
+                .button.st2.addimg.angle-right
                   Все услуги
       .zona12
         %section.grid-container
           .block13
             .grid-x.align-center
-              .large-5
-                %h2 Остались вопросы?
+              .large-10.cell
+                %h2.title Остались вопросы?
             .grid-x.align-center
-              .large-5
+              .large-10.cell
                 Напишите или позвоните нам в любое время и наши специалисты с удовольствием вам помогут!
             .grid-x.align-center
-              .large-5
+              .large-10.cell
                 Email:
                 %a{:href => "javsscripts:void(0)"} uslugi@headmade.pro
             .grid-x.align-center
-              .large-5
+              .large-10.cell
                 Телефон:
                 %a{:href => "javsscripts:void(0)"} +7(843)202-21-47
             .grid-x.align-center
-              .large-5
+              .large-10.cell
                 .button.btn2
                   Написать
       .zona13
         %footer.grid-container
           .block14
             .grid-x
-              .large-12.logo
+              .large-24.cell.logo
                 %span.is DOC
                 %span.uslugi Handler
             .grid-x
-              .large-12
+              .large-24.cell
                 Разработано в соответствии с
                 %a{:href => "javsscripts:void(0)"}правилами дизайна Единого портала Госуслуг
     %script{:src => "node_modules/jquery/dist/jquery.js"}

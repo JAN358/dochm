@@ -130,6 +130,11 @@ $-zf-flex-direction: (
   opacity: $opacity;
 }
 
+/*-text-transform-*/
+@mixin text-transform($tt: uppercase) {
+  text-transform: $tt;
+}
+
 /*-my stile-*/
 .fs12 {font-size: .75em;}
 .fs14 {font-size: 0.875em;}
@@ -151,15 +156,646 @@ $-zf-flex-direction: (
 .pt-15, py15{padding-top: 15px;}
 .pb-15, py15{padding-bottom: 15px;}
 
+/*-gos-stile-*/
+
+.title1{
+  @extend .font-l;
+}
+.title2{
+  @extend .font-b;
+}
+
+.content{
+  font-family: $body-font-family;
+  font-size:15px;
+  color: $color4;
+  @include breakpoint(small) {
+    line-height: 21px;
+  }    
+  @include breakpoint(medium) {
+    line-height: 22px;
+  }
+  @include breakpoint(large) {
+    line-height: 20px;
+  }
+}
+
+.homepage{
+  font-family: $body-font-family;
+  color: $color4;
+  @include breakpoint(small) {
+    font-size:15px;
+    line-height: 21px;
+  }    
+  @include breakpoint(medium) {
+    font-size:15px;
+    line-height: 22px;
+  }
+  @include breakpoint(large) {
+    font-size:16px;
+    line-height: 26px;
+  }
+}
+
+b, strong{
+  font-family: $body-font-family;
+  color: $black;
+  font-weight: 900;
+}
+
+sub{
+  @extend .font-r;
+  font-size:12px;
+  color: $color6;
+  line-height: 16px;
+}
+
+h1, .h1{
+  @extend .font-l;
+  color: $black;
+  @include breakpoint(small) {
+    font-size:22px;
+    line-height: 25px;
+  }    
+  @include breakpoint(medium) {
+    font-size:30px;
+    line-height: 34px;
+  }
+  @include breakpoint(large) {
+    font-size:42px;
+    line-height: 48px;
+  }
+}
+h2, .h2{
+  font-family: $body-font-family;
+  color: $color4;
+  font-size:15px;
+  line-height: 20px;
+}
+
+h3, .h3 {
+    @extend .font-b;
+    color: $black;
+    @include breakpoint(small) {
+      font-size:18px;
+      line-height: 22px;
+    }    
+    @include breakpoint(medium) {
+      font-size:17px;
+      line-height: 24px;
+    }
+    @include breakpoint(large) {
+      font-size:18px;
+      line-height: 20px;
+    }
+}
+
+h4, .h4 {
+    @extend .font-b;
+    font-size:15px;
+    color: $black;
+    @include breakpoint(small) {
+      line-height: 22px;
+    }    
+    @include breakpoint(medium) {
+      line-height: 22px;
+    }
+    @include breakpoint(large) {
+      line-height: 20px;
+    }
+}
+
+.service_h{
+  @include breakpoint(small) {
+    display: none;
+  }    
+  @include breakpoint(medium) {
+    display: none;
+  }
+  @include breakpoint(large) {
+    font-family: $body-font-family;
+    line-height: 40px;
+    font-size:36px;
+    color:$black;
+  }
+}
+.service_h3{
+    @extend .font-b;    
+    color:$black;
+    @include breakpoint(small) {
+      font-size:17px;
+      line-height: 22px;
+    }    
+    @include breakpoint(medium) {
+      font-size:18px;
+      line-height: 24px;
+    }
+    @include breakpoint(large) {
+      font-size:24px;
+      line-height: 27px;
+    }
+}
+
+.service_h4{
+    @extend .font-b;    
+    color:$black;
+    @include breakpoint(small) {
+      font-size:17px;
+      line-height: 21px;
+    }    
+    @include breakpoint(medium) {
+      font-size:18px;
+      line-height: 21px;
+    }
+    @include breakpoint(large) {
+      font-size:22px;
+      line-height: 26px;
+    }
+}
+
+.placeholder{
+  font-family: $body-font-family;
+  color:$color5;
+  @include breakpoint(small) {
+    font-size:15px;
+    line-height: 18px;
+  }    
+  @include breakpoint(medium) {
+    font-size:12px;
+    line-height: 12px;
+  }
+  @include breakpoint(large) {
+    font-size:10px;
+    line-height: 13px;
+  }
+}
+
+form{
+  input{
+    &[placeholder="placeholder"]{
+      font-family: $body-font-family;
+      color:$color4;
+      @include breakpoint(small) {
+        font-size:15px;
+        line-height: 21px;
+      }    
+      @include breakpoint(medium) {
+        font-size:15px;
+        line-height: 22px;
+      }
+      @include breakpoint(large) {
+        font-size:16px;
+        line-height: 26px;
+      }
+    }
+    &[disabled="disabled"]{
+      font-family: $body-font-family;
+      @include breakpoint(small) {
+        font-size:15px;
+        color: $color4;
+        line-height: 18px;
+      }    
+      @include breakpoint(medium) {
+        font-size:18px;
+        color: $color4;
+        line-height: 20px;
+      }
+      @include breakpoint(large) {
+        font-size:17px;  
+        color: $color7;
+        line-height: 19px;
+      }
+    }
+    &:active, &:focus{
+    font-family: $body-font-family;
+    @include breakpoint(small) {
+      font-size:15px;
+      color: $black;
+      line-height: 18px;
+    }    
+    @include breakpoint(medium) {
+      font-size:18px;
+      color: $color5;
+      line-height: 20px;
+    }
+    @include breakpoint(large) {
+      font-size:17px;  
+      color: $black;
+      line-height: 19px;
+    }
+    }
+  }
+}
+
+.text-help{
+  font-family: $body-font-family;
+  font-size:14px;  
+  color: $color6;
+  line-height: 20px;
+}
+
+a{
+  font-family: $body-font-family;
+  font-size:15px;  
+  color: $color8;
+  line-height: 20px;
+}
+
+.breadcrumbs{
+  font-family: $body-font-family;
+  font-size:15px;
+  color: $color6;
+  line-height: 20px;
+  @include breakpoint(small) {
+    display: none;
+  }    
+  @include breakpoint(medium) {
+    display: none;
+  }
+  .end{
+    font-family: $body-font-family;
+    font-size:13px;
+    color: $color9;
+    line-height: 21px;
+  }
+}
+
+.card{
+  .title{
+    font-family: $body-font-family;
+    font-weight: 900;
+    color: $black;
+    @include breakpoint(small) {
+      font-size:17px;
+      line-height: 22px;
+    }    
+    @include breakpoint(medium) {
+      font-size:17px;
+      line-height: 26px;
+    }
+    @include breakpoint(large) {
+      font-size:18px;
+      line-height: 28px;
+    }
+    a{
+       @include breakpoint(small) {
+          font-weight: 400;
+          font-size:15px;
+          line-height: 21px;
+        }    
+        @include breakpoint(medium) {
+          font-weight: 400;
+          font-size:17px;
+          line-height: 26px;
+        }
+        @include breakpoint(large) {
+          font-weight: 900;
+          font-size:18px;
+          line-height: 28px;
+        }
+      b{
+        @include breakpoint(small) {
+          font-size:17px;
+          line-height: 22px;
+        }    
+      }
+    }
+  }
+  .text{
+    font-family: $body-font-family;
+    color: $color4;
+    @include breakpoint(small) {
+      font-weight: 900;
+      font-size:15px;
+      line-height: 21px;
+      .notice{
+        font-size:14px;
+      }
+    }    
+    @include breakpoint(medium) {
+      font-weight: 900;
+      font-size:17px;
+      line-height: 26px;
+    }
+    @include breakpoint(large) {
+      font-weight: 400;
+      font-size:18px;
+      line-height: 28px;
+    }
+    a{
+      @include breakpoint(small) {
+        font-weight: 400;
+        font-size:15px;
+        line-height: 21px;
+      }    
+      @include breakpoint(medium) {
+        font-weight: 400;
+        font-size:17px;
+        line-height: 26px;
+      }
+      @include breakpoint(large) {
+        font-weight: 900;
+        font-size:18px;
+        line-height: 28px;
+      }
+    }
+  }
+}
+
+.button{
+  font-family: $body-font-family;
+  color:$color10;
+  background-color: $color8;
+  align-items: center;
+  display: inline-flex;
+  border:1px solid $color17;
+  @include border-radius(4px);
+  @include breakpoint(small) {
+    height: 50px;
+    padding: 0 20px;
+    font-size:15px;
+    line-height: 15px;
+  }    
+  @include breakpoint(medium) {
+    height: 50px;
+    padding: 0 25px;
+    font-size:16px;
+    line-height: 16px;
+  }
+  @include breakpoint(large) {
+    height: 70px;
+    padding: 0 48px;
+    font-size:17px;
+    line-height: 17px;
+  }
+  &:hover{
+    color:$white;
+    background-color: $color13;
+  }
+  &:active{
+    color:$white;
+    background-color: $color14;
+  }
+  &[disabled="disabled"]{
+    color:$color16;
+    background-color: $color15;
+  }
+  &.addimg{
+    @include breakpoint(small) {
+      padding: 0 15px;
+    }    
+    @include breakpoint(medium) {
+      padding: 0 20px;
+    }
+    @include breakpoint(large) {
+      padding: 0 25px;
+    }
+    &::after{
+      position: relative;
+      @extend .fas;
+      @extend %fa-icon;
+      @include breakpoint(small) {
+        padding-left: 15px;
+      }    
+      @include breakpoint(medium) {
+        padding-left: 20px;
+      }
+      @include breakpoint(large) {
+        padding-left: 12px;
+      }   
+    }
+    &.angle-right{
+      &::after{
+        content: fa-content($fa-var-angle-right);
+      }
+    }
+  }
+  .small{
+     color:$color10;
+     @include breakpoint(small) {
+        font-size:15px;
+        line-height: 15px;
+      }    
+      @include breakpoint(medium) {
+        font-size:15px;
+        line-height: 15px;
+      }
+      @include breakpoint(large) {
+        height: 42px;
+        padding: 0 20px;
+        font-size:14px;
+        line-height: 14px;
+      }
+      &:hover{
+        @include breakpoint(large) {
+          color:$white;
+        }
+      }
+      &.addimg{
+        @include breakpoint(small) {
+          padding: 0;
+        }    
+        @include breakpoint(medium) {
+          padding: 0;
+        }
+        @include breakpoint(large) {
+          padding: 0 25px;
+        }
+        &::after{
+          @include breakpoint(small) {
+            display: none;
+          }    
+          @include breakpoint(medium) {
+            display: none;
+          }
+          @include breakpoint(large) {
+            padding-left: 10px;
+          }   
+        }
+      }
+  }
+  .large{
+     color:$color10;
+     @include breakpoint(small) {
+        height: 50px;
+        padding: 0 20px;
+        font-size:17px;
+        line-height: 17px;
+      }    
+      @include breakpoint(medium) {
+        height: 50px;
+        padding: 0 25px;
+        font-size:18px;
+        line-height: 18px;
+      }
+      @include breakpoint(large) {
+        height: 70px;
+        padding: 0 48px;
+        font-size:24px;
+        line-height: 24px;
+      }
+      &:hover{
+        color:$white;
+      }
+  }
+  &.st2{
+    color: $color10;
+    background-color: $white;
+    &:hover{
+      color:$color20;
+      background-color: $color19;
+    }
+    &:active{
+      color:$black;
+      background-color: $color18;
+    }
+  }
+}
+
+.tabs{
+  font-family: $body-font-family;
+    font-weight: 900;
+    color: $black;
+    @include breakpoint(small) {
+      display: none;
+    }    
+    @include breakpoint(medium) {
+      font-size:15px;
+      line-height: 15px;
+    }
+    @include breakpoint(large) {
+      font-size:16px;
+      line-height: 16px;
+    }
+  .is-active{
+    color: $color8;
+  }
+  &:hover{
+    color: $color11;
+  }
+}
+
+input[type="file"]{
+  font-family: $body-font-family;
+  font-weight: 900;
+  color: $black;
+  @include breakpoint(small) {
+    font-size:15px;
+    line-height: 15px;
+  }    
+  @include breakpoint(medium) {
+    font-size:16px;
+    line-height: 16px;
+  }
+  @include breakpoint(large) {
+    font-size:14px;
+    line-height: 14px;
+  }
+  &:active{
+    color:$color9;
+  }
+}
+/* develop
+table{
+  tbody{
+    tr{
+    background-color: $white;
+    &:nth-child(2n){
+      background-color: $white;
+    }
+      td, th{
+        border: 1px solid $color12;
+        @include breakpoint(small) {
+          padding: 8px 0;
+        }
+        @include breakpoint(medium) {
+          padding: 20px 10px;
+        }
+        @include breakpoint(large) {
+          padding: 20px 15px;
+        }
+      }
+      th{
+        @include breakpoint(small) {
+          border-bottom: 0;
+        }
+        @include breakpoint(medium) {
+          padding-bottom: 20px; 
+          border-bottom: 4px solid $color12;
+        }
+        @include breakpoint(large) {
+          padding-bottom: 20px; 
+          border-bottom: 4px solid $color12;
+        }
+      }
+    }
+  }
+}
+*/
+  .table{
+    margin-bottom: 5px;    
+    //border-right: 1px solid $color12;
+    //border-bottom: 1px solid $color12;
+    .colm{
+        @include breakpoint(small) {
+          padding: 20px 0 0;
+        }
+        @include breakpoint(medium) {
+          padding:  0;
+        }
+        @include breakpoint(large) {
+          padding: 0;
+        }
+       &.last-r{
+        .th, .td{
+          border-right: 1px solid $color12;
+        }
+       }
+      .th, .td{
+        border-left: 1px solid $color12;
+        border-top: 1px solid $color12;
+        @include breakpoint(small) {
+          padding: 4px 0;
+        }
+        @include breakpoint(medium) {
+          padding: 20px 10px;
+        }
+        @include breakpoint(large) {
+          padding: 20px 15px;
+        }
+        &.last-b{
+          border-bottom: 1px solid $color12;
+        }
+      }
+      .th{
+        @include breakpoint(small) {
+          border-bottom: 0;
+        }
+        @include breakpoint(medium) {
+          padding-bottom: 20px; 
+          border-bottom: 4px solid $color12;
+        }
+        @include breakpoint(large) {
+          padding-bottom: 20px; 
+          border-bottom: 4px solid $color12;
+        }
+      }   
+    }
+  } 
+
 /*-for sait-*/
+
+.title{
+  font-size:3rem;
+  line-height: 3rem;
+}
 
 .color1{color:$color1;}
 .color2{color:$color2;}
 .color3{color:$color3;}
 
-div[class*="btn"]{color: $white;@include border-radius(4px);margin: 30px 0 10px;}
+div[class*="btn"]{color: $white;margin: 30px 0 10px;@extend .font-b;letter-spacing: 1px;}
 .btn1{
-  background-color: $color1;
   position: relative;
   &::after{
   @extend %fa-icon;
